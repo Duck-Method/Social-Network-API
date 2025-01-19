@@ -1,4 +1,4 @@
-import Thought from '../models/thought.js';
+import Thought from '../models/thoughts.js';
 import User from '../models/user.js';
 
 // Get all thoughts
@@ -91,7 +91,7 @@ export const removeReaction = async (req, res) => {
   try {
     const thought = await Thought.findByIdAndUpdate(
       req.params.id,
-      { $pull: { reactions: { reactionId: req.params.reactionId } } },
+      { $pull: { reactions: { reactionID: req.params.reactionId } } },
       { new: true }
     );
     if (!thought) {

@@ -1,14 +1,16 @@
 {
   "name": "social-network-api",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./server.js",
-    "seed": "",
+    "start": "node server/server.js",
+    "seed": "node server/seeds.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brian",
   "license": "MIT",
   "dependencies": {
+    "dayjs": "^1.11.13",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.5"

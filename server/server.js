@@ -1,5 +1,5 @@
 import express from "express";
-import mongoose from './config/connection.js';
+import connectDB from './config/connection.js';
 import routes from './routes/index.js';
 
 const app = express();
@@ -11,10 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/social-network-api',
-);
-
+connectDB();
 app.listen(PORT, () => {
-    console.log('Serveris litening on http://localhost:${PORT}');
+    console.log(`App listening on port ${PORT}`);
 });
