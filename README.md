@@ -1,5 +1,5 @@
 # Social-Network-API
-This is a project to build am API to handl elarge amounts of unstructured data using NoSQL, Express,js, and MongoDB
+This is a project to build an API to handle large amounts of unstructured data using NoSQL, Express.js, and MongoDB
 
 ## Tutorial
 Here is the link to the video tutorial of the initiation using node.js and the functionality using insomnia:
